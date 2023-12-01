@@ -13,7 +13,7 @@ numbers = {
 }
 
 sum_calibration_values = 0
-for line in open('trebuchet.txt').read().splitlines():
+for line in open('day1/trebuchet.txt').read().splitlines():
     digits = re.findall(r"(?=(\d|" + '|'.join(numbers.keys()) + "))", line)
     first_digit = str(digits[0]) if digits[0].isnumeric() else numbers.get(digits[0])
     last_digit = str(digits[-1]) if digits[-1].isnumeric() else numbers.get(digits[-1])
